@@ -1,0 +1,14 @@
+zero-graph v1
+origin source-text
+module "c-header-import"
+hash "graph:c023c1e0ab683177"
+
+node #mod_f976fd1c Module name:"c-header-import" path:"c-header-import.0" line:1 column:1
+node #cimp_cfd4b78f CImport name:"c" value:"conformance/c/simple.h" path:"c-header-import.0" line:1 column:1
+node #decl_712a85e5 Function name:"main" type:"Void" path:"c-header-import.0" line:3 column:1 public:true
+node #type_981cd849 TypeRef type:"Void" path:"c-header-import.0" line:3 column:1
+node #block_797351d6 Block name:"body" path:"c-header-import.0" line:3 column:1
+edge #mod_f976fd1c cImport #cimp_cfd4b78f order:0
+edge #mod_f976fd1c function #decl_712a85e5 order:0
+edge #decl_712a85e5 returnType #type_981cd849
+edge #decl_712a85e5 body #block_797351d6

@@ -1,0 +1,26 @@
+zero-graph v1
+origin source-text
+module "c-import-target-win"
+hash "graph:e072f54cb7d9d7f6"
+
+node #mod_bdb96638 Module name:"c-import-target-win" path:"c-import-target-win.0" line:1 column:1
+node #cimp_31070b08 CImport name:"c" value:"conformance/c/target-conditional.h" path:"c-import-target-win.0" line:1 column:1
+node #decl_d8b8baa2 Function name:"main" type:"i32" path:"c-import-target-win.0" line:3 column:1 exportC:true
+node #type_81ec96ce TypeRef type:"i32" path:"c-import-target-win.0" line:3 column:1
+node #block_52720d95 Block name:"body" path:"c-import-target-win.0" line:3 column:1
+node #stmt_80998cd5 Return path:"c-import-target-win.0" line:4 column:5
+node #expr_e6fa6208 MethodCall name:"zero_c_windows_add" path:"c-import-target-win.0" line:4 column:32
+node #expr_83744470 FieldAccess name:"zero_c_windows_add" path:"c-import-target-win.0" line:4 column:14
+node #expr_c2702f76 Identifier name:"c" path:"c-import-target-win.0" line:4 column:12
+node #expr_3e18f270 Literal value:"20" path:"c-import-target-win.0" line:4 column:33
+node #expr_49083c91 Literal value:"22" path:"c-import-target-win.0" line:4 column:37
+edge #mod_bdb96638 cImport #cimp_31070b08 order:0
+edge #mod_bdb96638 function #decl_d8b8baa2 order:0
+edge #decl_d8b8baa2 returnType #type_81ec96ce
+edge #expr_83744470 left #expr_c2702f76
+edge #expr_e6fa6208 left #expr_83744470
+edge #expr_e6fa6208 arg #expr_3e18f270 order:0
+edge #expr_e6fa6208 arg #expr_49083c91 order:1
+edge #stmt_80998cd5 expr #expr_e6fa6208
+edge #block_52720d95 statement #stmt_80998cd5 order:0
+edge #decl_d8b8baa2 body #block_52720d95

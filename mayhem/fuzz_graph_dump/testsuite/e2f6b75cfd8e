@@ -1,0 +1,22 @@
+zero-graph v1
+origin source-text
+module "direct-unhandled-error-exit"
+hash "graph:5cfe2d111c326fe5"
+
+node #mod_75db2168 Module name:"direct-unhandled-error-exit" path:"direct-unhandled-error-exit.0" line:1 column:1
+node #decl_08b0079b Function name:"main" type:"Void" path:"direct-unhandled-error-exit.0" line:1 column:1 public:true fallible:true
+node #param_b5218773 Param name:"world" type:"World" path:"direct-unhandled-error-exit.0" line:1 column:13
+node #type_1ff74e27 TypeRef type:"World" path:"direct-unhandled-error-exit.0" line:1 column:13
+node #type_7677d76f TypeRef type:"Void" path:"direct-unhandled-error-exit.0" line:1 column:1
+node #effect_c49bae32 EffectRef name:"error" path:"direct-unhandled-error-exit.0" line:1 column:1
+node #err_fa859452 ErrorVariant name:"Invalid" path:"direct-unhandled-error-exit.0" line:1 column:43
+node #block_fc54c768 Block name:"body" path:"direct-unhandled-error-exit.0" line:1 column:1
+node #stmt_ec3e7280 Raise name:"Invalid" path:"direct-unhandled-error-exit.0" line:2 column:5
+edge #mod_75db2168 function #decl_08b0079b order:0
+edge #decl_08b0079b param #param_b5218773 order:0
+edge #param_b5218773 type #type_1ff74e27
+edge #decl_08b0079b returnType #type_7677d76f
+edge #decl_08b0079b effect #effect_c49bae32
+edge #decl_08b0079b error #err_fa859452
+edge #block_fc54c768 statement #stmt_ec3e7280 order:0
+edge #decl_08b0079b body #block_fc54c768

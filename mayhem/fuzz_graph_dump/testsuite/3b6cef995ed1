@@ -1,0 +1,36 @@
+zero-graph v1
+origin source-text
+module "direct-if-return"
+hash "graph:4d022f3f32ce39db"
+
+node #mod_fac4be18 Module name:"direct-if-return" path:"direct-if-return.0" line:1 column:1
+node #decl_584b6c4c Function name:"main" type:"i32" path:"direct-if-return.0" line:1 column:1 exportC:true
+node #param_aba07d2f Param name:"a" type:"i32" path:"direct-if-return.0" line:1 column:18
+node #type_2b3d41f8 TypeRef type:"i32" path:"direct-if-return.0" line:1 column:18
+node #type_0b2f3813 TypeRef type:"i32" path:"direct-if-return.0" line:1 column:1
+node #block_a366e8a8 Block name:"body" path:"direct-if-return.0" line:1 column:1
+node #stmt_4f51949c If path:"direct-if-return.0" line:2 column:5
+node #expr_f8333638 Call name:">" path:"direct-if-return.0" line:2 column:10
+node #expr_1d8caae1 Identifier name:"a" path:"direct-if-return.0" line:2 column:8
+node #expr_3c38eb8f Literal value:"10" path:"direct-if-return.0" line:2 column:12
+node #block_6b8f446f Block name:"then" path:"direct-if-return.0" line:2 column:5
+node #stmt_f9491acb Return path:"direct-if-return.0" line:3 column:9
+node #expr_d3ea18b3 Literal value:"7" path:"direct-if-return.0" line:3 column:16
+node #block_70fef8e0 Block name:"else" path:"direct-if-return.0" line:2 column:5
+node #stmt_08f121b2 Return path:"direct-if-return.0" line:5 column:9
+node #expr_52cd9e16 Literal value:"3" path:"direct-if-return.0" line:5 column:16
+edge #mod_fac4be18 function #decl_584b6c4c order:0
+edge #decl_584b6c4c param #param_aba07d2f order:0
+edge #param_aba07d2f type #type_2b3d41f8
+edge #decl_584b6c4c returnType #type_0b2f3813
+edge #expr_f8333638 left #expr_1d8caae1
+edge #expr_f8333638 right #expr_3c38eb8f order:1
+edge #stmt_4f51949c expr #expr_f8333638
+edge #stmt_f9491acb expr #expr_d3ea18b3
+edge #block_6b8f446f statement #stmt_f9491acb order:0
+edge #stmt_4f51949c then #block_6b8f446f
+edge #stmt_08f121b2 expr #expr_52cd9e16
+edge #block_70fef8e0 statement #stmt_08f121b2 order:0
+edge #stmt_4f51949c else #block_70fef8e0 order:1
+edge #block_a366e8a8 statement #stmt_4f51949c order:0
+edge #decl_584b6c4c body #block_a366e8a8

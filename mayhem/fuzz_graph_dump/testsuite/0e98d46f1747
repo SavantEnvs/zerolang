@@ -1,0 +1,36 @@
+zero-graph v1
+origin source-text
+module "const-arithmetic"
+hash "graph:409bdf4bca9e7427"
+
+node #mod_77b7d4c8 Module name:"const-arithmetic" path:"const-arithmetic.0" line:1 column:1
+node #decl_4d096563-4f06 Const name:"base" type:"i32" path:"const-arithmetic.0" line:1 column:1
+node #expr_33f903f6 Literal value:"40" path:"const-arithmetic.0" line:1 column:19
+node #decl_4d096563-5fd1 Const name:"answer" type:"i32" path:"const-arithmetic.0" line:3 column:1
+node #expr_767f63e5 Call name:"+" path:"const-arithmetic.0" line:3 column:26
+node #expr_e3690390 Identifier name:"base" path:"const-arithmetic.0" line:3 column:21
+node #expr_b70d8524 Literal value:"2" path:"const-arithmetic.0" line:3 column:28
+node #decl_729f3e06 Function name:"main" type:"Void" path:"const-arithmetic.0" line:5 column:1 public:true
+node #type_86af1266 TypeRef type:"Void" path:"const-arithmetic.0" line:5 column:1
+node #block_27d3ee2b Block name:"body" path:"const-arithmetic.0" line:5 column:1
+node #stmt_428a6550 ExpressionStatement path:"const-arithmetic.0" line:6 column:5
+node #expr_e5688e56 Call name:"expect" path:"const-arithmetic.0" line:6 column:5
+node #expr_fd3691fd Identifier name:"expect" path:"const-arithmetic.0" line:6 column:5
+node #expr_f062a0bd Call name:"==" path:"const-arithmetic.0" line:6 column:20
+node #expr_4c63b0c8 Identifier name:"answer" path:"const-arithmetic.0" line:6 column:13
+node #expr_f5033d1c Literal value:"42" path:"const-arithmetic.0" line:6 column:23
+edge #mod_77b7d4c8 const #decl_4d096563-4f06 order:0
+edge #decl_4d096563-4f06 value #expr_33f903f6
+edge #mod_77b7d4c8 const #decl_4d096563-5fd1 order:1
+edge #expr_767f63e5 left #expr_e3690390
+edge #expr_767f63e5 right #expr_b70d8524 order:1
+edge #decl_4d096563-5fd1 value #expr_767f63e5
+edge #mod_77b7d4c8 function #decl_729f3e06 order:0
+edge #decl_729f3e06 returnType #type_86af1266
+edge #expr_e5688e56 left #expr_fd3691fd
+edge #expr_f062a0bd left #expr_4c63b0c8
+edge #expr_f062a0bd right #expr_f5033d1c order:1
+edge #expr_e5688e56 arg #expr_f062a0bd order:0
+edge #stmt_428a6550 expr #expr_e5688e56
+edge #block_27d3ee2b statement #stmt_428a6550 order:0
+edge #decl_729f3e06 body #block_27d3ee2b

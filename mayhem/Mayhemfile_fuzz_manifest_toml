@@ -1,0 +1,10 @@
+project: savantenvs/zerolang
+target: fuzz_manifest_toml
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_manifest_toml/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_manifest_toml
+    libfuzzer: true
+    dictionary: /mayhem/mayhem/fuzz_manifest_toml/fuzz_manifest_toml.dict
+    timeout: 10

@@ -1,0 +1,20 @@
+zero-graph v1
+origin source-text
+module "test-expected-fail"
+hash "graph:74b615f533072298"
+
+node #mod_e88dc03c Module name:"test-expected-fail" path:"test-expected-fail.0" line:1 column:1
+node #decl_66a1395f Function name:"__zero_test_0" type:"Void" value:"xfail: known checked failure" path:"test-expected-fail.0" line:1 column:1
+node #type_152cece3 TypeRef type:"Void" path:"test-expected-fail.0" line:1 column:1
+node #block_115c825e Block name:"body" path:"test-expected-fail.0" line:1 column:1
+node #stmt_88a29172 ExpressionStatement path:"test-expected-fail.0" line:2 column:5
+node #expr_6296b407 Call name:"expect" path:"test-expected-fail.0" line:2 column:5
+node #expr_3e2dcd51 Identifier name:"expect" path:"test-expected-fail.0" line:2 column:5
+node #expr_13ba3484 Literal value:"false" path:"test-expected-fail.0" line:2 column:13
+edge #mod_e88dc03c function #decl_66a1395f order:0
+edge #decl_66a1395f returnType #type_152cece3
+edge #expr_6296b407 left #expr_3e2dcd51
+edge #expr_6296b407 arg #expr_13ba3484 order:0
+edge #stmt_88a29172 expr #expr_6296b407
+edge #block_115c825e statement #stmt_88a29172 order:0
+edge #decl_66a1395f body #block_115c825e

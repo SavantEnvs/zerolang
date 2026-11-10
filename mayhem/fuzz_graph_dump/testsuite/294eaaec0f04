@@ -1,0 +1,30 @@
+zero-graph v1
+origin source-text
+module "messy"
+hash "graph:77a939b0b33acaa5"
+
+node #mod_6c7bb090 Module name:"messy" path:"messy.0" line:1 column:1
+node #decl_ea7cf837 Function name:"main" type:"Void" path:"messy.0" line:1 column:1 public:true fallible:true
+node #param_49c27933 Param name:"world" type:"World" path:"messy.0" line:1 column:13
+node #type_89e94ad0 TypeRef type:"World" path:"messy.0" line:1 column:13
+node #type_3728c59f TypeRef type:"Void" path:"messy.0" line:1 column:1
+node #effect_5d14975a EffectRef name:"error" path:"messy.0" line:1 column:1
+node #block_3c82bb70 Block name:"body" path:"messy.0" line:1 column:1
+node #stmt_2f22368f Check path:"messy.0" line:2 column:5
+node #expr_a3944376 MethodCall name:"write" path:"messy.0" line:2 column:26
+node #expr_e07754a4 FieldAccess name:"write" path:"messy.0" line:2 column:21
+node #expr_3a8f39a6 FieldAccess name:"out" path:"messy.0" line:2 column:17
+node #expr_715f5167 Identifier name:"world" path:"messy.0" line:2 column:11
+node #expr_42b2a979 Literal type:"String" value:"format me\n" path:"messy.0" line:2 column:27
+edge #mod_6c7bb090 function #decl_ea7cf837 order:0
+edge #decl_ea7cf837 param #param_49c27933 order:0
+edge #param_49c27933 type #type_89e94ad0
+edge #decl_ea7cf837 returnType #type_3728c59f
+edge #decl_ea7cf837 effect #effect_5d14975a
+edge #expr_3a8f39a6 left #expr_715f5167
+edge #expr_e07754a4 left #expr_3a8f39a6
+edge #expr_a3944376 left #expr_e07754a4
+edge #expr_a3944376 arg #expr_42b2a979 order:0
+edge #stmt_2f22368f expr #expr_a3944376
+edge #block_3c82bb70 statement #stmt_2f22368f order:0
+edge #decl_ea7cf837 body #block_3c82bb70

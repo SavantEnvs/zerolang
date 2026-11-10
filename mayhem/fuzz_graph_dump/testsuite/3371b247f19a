@@ -1,0 +1,30 @@
+zero-graph v1
+origin source-text
+module "package:host-leak-package@0.1.0"
+hash "graph:b91b30b5ada2ecb8"
+
+node #mod_8f681a93 Module name:"main" path:"src/main.0" line:1 column:1
+node #decl_96efb517 Function name:"main" type:"Void" path:"src/main.0" line:1 column:1 public:true fallible:true
+node #param_65393845 Param name:"world" type:"World" path:"src/main.0" line:1 column:13
+node #type_003f6e7e TypeRef type:"World" path:"src/main.0" line:1 column:13
+node #type_d56a9b15 TypeRef type:"Void" path:"src/main.0" line:1 column:1
+node #effect_4c33f0f0 EffectRef name:"error" path:"src/main.0" line:1 column:1
+node #block_b7a5658c Block name:"body" path:"src/main.0" line:1 column:1
+node #stmt_11ff27e2 Check path:"src/main.0" line:2 column:5
+node #expr_156537be MethodCall name:"write" path:"src/main.0" line:2 column:26
+node #expr_2f55b8b2 FieldAccess name:"write" path:"src/main.0" line:2 column:21
+node #expr_ff5a9626 FieldAccess name:"out" path:"src/main.0" line:2 column:17
+node #expr_ab52337e Identifier name:"world" path:"src/main.0" line:2 column:11
+node #expr_18cc2e6f Literal type:"String" value:"host leak package\n" path:"src/main.0" line:2 column:27
+edge #mod_8f681a93 function #decl_96efb517 order:0
+edge #decl_96efb517 param #param_65393845 order:0
+edge #param_65393845 type #type_003f6e7e
+edge #decl_96efb517 returnType #type_d56a9b15
+edge #decl_96efb517 effect #effect_4c33f0f0
+edge #expr_ff5a9626 left #expr_ab52337e
+edge #expr_2f55b8b2 left #expr_ff5a9626
+edge #expr_156537be left #expr_2f55b8b2
+edge #expr_156537be arg #expr_18cc2e6f order:0
+edge #stmt_11ff27e2 expr #expr_156537be
+edge #block_b7a5658c statement #stmt_11ff27e2 order:0
+edge #decl_96efb517 body #block_b7a5658c

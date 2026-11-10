@@ -1,0 +1,30 @@
+zero-graph v1
+origin source-text
+module "package:toml-precedence@0.1.0"
+hash "graph:7dff2fc05db37a62"
+
+node #mod_30a6bca4 Module name:"toml" path:"src/toml.0" line:1 column:1
+node #decl_af0c8be3 Function name:"main" type:"Void" path:"src/toml.0" line:1 column:1 public:true fallible:true
+node #param_04bbc70a Param name:"world" type:"World" path:"src/toml.0" line:1 column:13
+node #type_6fbfc2fa TypeRef type:"World" path:"src/toml.0" line:1 column:13
+node #type_88ea3bb0 TypeRef type:"Void" path:"src/toml.0" line:1 column:1
+node #effect_55576815 EffectRef name:"error" path:"src/toml.0" line:1 column:1
+node #block_62cc89b1 Block name:"body" path:"src/toml.0" line:1 column:1
+node #stmt_0b676aed Check path:"src/toml.0" line:2 column:5
+node #expr_b43e8c39 MethodCall name:"write" path:"src/toml.0" line:2 column:26
+node #expr_6d846261 FieldAccess name:"write" path:"src/toml.0" line:2 column:21
+node #expr_fdc37d49 FieldAccess name:"out" path:"src/toml.0" line:2 column:17
+node #expr_ca056f2f Identifier name:"world" path:"src/toml.0" line:2 column:11
+node #expr_ffb4bec2 Literal type:"String" value:"toml precedence\n" path:"src/toml.0" line:2 column:27
+edge #mod_30a6bca4 function #decl_af0c8be3 order:0
+edge #decl_af0c8be3 param #param_04bbc70a order:0
+edge #param_04bbc70a type #type_6fbfc2fa
+edge #decl_af0c8be3 returnType #type_88ea3bb0
+edge #decl_af0c8be3 effect #effect_55576815
+edge #expr_fdc37d49 left #expr_ca056f2f
+edge #expr_6d846261 left #expr_fdc37d49
+edge #expr_b43e8c39 left #expr_6d846261
+edge #expr_b43e8c39 arg #expr_ffb4bec2 order:0
+edge #stmt_0b676aed expr #expr_b43e8c39
+edge #block_62cc89b1 statement #stmt_0b676aed order:0
+edge #decl_af0c8be3 body #block_62cc89b1

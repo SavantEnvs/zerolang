@@ -1,0 +1,40 @@
+zero-graph v1
+origin source-text
+module "direct-generic-identity"
+hash "graph:ca9310fb77167203"
+
+node #mod_304b4c78 Module name:"direct-generic-identity" path:"direct-generic-identity.0" line:1 column:1
+node #decl_21a30d88 Function name:"identity" type:"T" path:"direct-generic-identity.0" line:1 column:1
+node #param_467fe73d Param name:"T" type:"Type" path:"direct-generic-identity.0" line:1 column:13
+node #type_63305089 TypeRef type:"Type" path:"direct-generic-identity.0" line:1 column:13
+node #param_e0a90e11 Param name:"value" type:"T" path:"direct-generic-identity.0" line:1 column:22
+node #type_c948896d TypeRef type:"T" path:"direct-generic-identity.0" line:1 column:22
+node #type_9cf92d69 TypeRef type:"T" path:"direct-generic-identity.0" line:1 column:1
+node #block_3762a738 Block name:"body" path:"direct-generic-identity.0" line:1 column:1
+node #stmt_f1cc38a6 Return path:"direct-generic-identity.0" line:2 column:5
+node #expr_291f847d Identifier name:"value" path:"direct-generic-identity.0" line:2 column:12
+node #decl_c0d49ffe Function name:"main" type:"u8" path:"direct-generic-identity.0" line:5 column:1 exportC:true
+node #type_864afb00 TypeRef type:"u8" path:"direct-generic-identity.0" line:5 column:1
+node #block_01a6174c Block name:"body" path:"direct-generic-identity.0" line:5 column:1
+node #stmt_ddfc7fe2 Return path:"direct-generic-identity.0" line:6 column:5
+node #expr_e4c8b458 Call name:"identity" path:"direct-generic-identity.0" line:6 column:24
+node #expr_40a5196e Identifier name:"identity" path:"direct-generic-identity.0" line:6 column:12
+node #type_963cc983 TypeRef type:"u8" path:"direct-generic-identity.0" line:6 column:21
+node #expr_e2a36a59 Literal value:"42_u8" path:"direct-generic-identity.0" line:6 column:25
+edge #mod_304b4c78 function #decl_21a30d88 order:0
+edge #decl_21a30d88 typeParam #param_467fe73d order:0
+edge #param_467fe73d type #type_63305089
+edge #decl_21a30d88 param #param_e0a90e11 order:0
+edge #param_e0a90e11 type #type_c948896d
+edge #decl_21a30d88 returnType #type_9cf92d69
+edge #stmt_f1cc38a6 expr #expr_291f847d
+edge #block_3762a738 statement #stmt_f1cc38a6 order:0
+edge #decl_21a30d88 body #block_3762a738
+edge #mod_304b4c78 function #decl_c0d49ffe order:1
+edge #decl_c0d49ffe returnType #type_864afb00
+edge #expr_40a5196e typeArg #type_963cc983 order:0
+edge #expr_e4c8b458 left #expr_40a5196e
+edge #expr_e4c8b458 arg #expr_e2a36a59 order:0
+edge #stmt_ddfc7fe2 expr #expr_e4c8b458
+edge #block_01a6174c statement #stmt_ddfc7fe2 order:0
+edge #decl_c0d49ffe body #block_01a6174c

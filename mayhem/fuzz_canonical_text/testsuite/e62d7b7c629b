@@ -1,0 +1,3 @@
+pub fn inputName() -> String {
+    return std.args.getOr(1, "batch3.txt")
+}

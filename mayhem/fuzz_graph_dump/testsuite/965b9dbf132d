@@ -1,0 +1,30 @@
+zero-graph v1
+origin source-text
+module "package:target-webbits@0.1.0"
+hash "graph:fb5375e21c43ab37"
+
+node #mod_a8c67dac Module name:"main" path:"src/main.0" line:1 column:1
+node #decl_bc7890cb Function name:"main" type:"Void" path:"src/main.0" line:1 column:1 public:true fallible:true
+node #param_2309f3e1 Param name:"world" type:"World" path:"src/main.0" line:1 column:13
+node #type_6ac882b3 TypeRef type:"World" path:"src/main.0" line:1 column:13
+node #type_cb9900fd TypeRef type:"Void" path:"src/main.0" line:1 column:1
+node #effect_a8184620 EffectRef name:"error" path:"src/main.0" line:1 column:1
+node #block_f533f476 Block name:"body" path:"src/main.0" line:1 column:1
+node #stmt_8e7031a0 Check path:"src/main.0" line:2 column:5
+node #expr_7ae02412 MethodCall name:"write" path:"src/main.0" line:2 column:26
+node #expr_9b66b4ff FieldAccess name:"write" path:"src/main.0" line:2 column:21
+node #expr_a77ba8c2 FieldAccess name:"out" path:"src/main.0" line:2 column:17
+node #expr_06149e6d Identifier name:"world" path:"src/main.0" line:2 column:11
+node #expr_7f37b7f4 Literal type:"String" value:"webbits\n" path:"src/main.0" line:2 column:27
+edge #mod_a8c67dac function #decl_bc7890cb order:0
+edge #decl_bc7890cb param #param_2309f3e1 order:0
+edge #param_2309f3e1 type #type_6ac882b3
+edge #decl_bc7890cb returnType #type_cb9900fd
+edge #decl_bc7890cb effect #effect_a8184620
+edge #expr_a77ba8c2 left #expr_06149e6d
+edge #expr_9b66b4ff left #expr_a77ba8c2
+edge #expr_7ae02412 left #expr_9b66b4ff
+edge #expr_7ae02412 arg #expr_7f37b7f4 order:0
+edge #stmt_8e7031a0 expr #expr_7ae02412
+edge #block_f533f476 statement #stmt_8e7031a0 order:0
+edge #decl_bc7890cb body #block_f533f476

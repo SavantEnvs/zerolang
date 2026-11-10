@@ -1,0 +1,32 @@
+zero-graph v1
+origin source-text
+module "direct-crc32-bytes"
+hash "graph:65166be72b896f56"
+
+node #mod_77ecfbda Module name:"direct-crc32-bytes" path:"direct-crc32-bytes.0" line:1 column:1
+node #decl_118b2c32 Function name:"main" type:"u32" path:"direct-crc32-bytes.0" line:1 column:1 exportC:true
+node #type_dde6590d TypeRef type:"u32" path:"direct-crc32-bytes.0" line:1 column:1
+node #block_b25e75de Block name:"body" path:"direct-crc32-bytes.0" line:1 column:1
+node #stmt_21a22fdb Return path:"direct-crc32-bytes.0" line:2 column:5
+node #expr_7a531641 MethodCall name:"crc32Bytes" path:"direct-crc32-bytes.0" line:2 column:32
+node #expr_a4b80349 FieldAccess name:"crc32Bytes" path:"direct-crc32-bytes.0" line:2 column:22
+node #expr_912428a4 FieldAccess name:"codec" path:"direct-crc32-bytes.0" line:2 column:16
+node #expr_e096901d Identifier name:"std" path:"direct-crc32-bytes.0" line:2 column:12
+node #expr_5e614dcf MethodCall name:"span" path:"direct-crc32-bytes.0" line:2 column:45
+node #expr_277371e7 FieldAccess name:"span" path:"direct-crc32-bytes.0" line:2 column:41
+node #expr_b8683ef8 FieldAccess name:"mem" path:"direct-crc32-bytes.0" line:2 column:37
+node #expr_4a97b1a0 Identifier name:"std" path:"direct-crc32-bytes.0" line:2 column:33
+node #expr_9dc58a5c Literal type:"String" value:"zero hash payload\n" path:"direct-crc32-bytes.0" line:2 column:46
+edge #mod_77ecfbda function #decl_118b2c32 order:0
+edge #decl_118b2c32 returnType #type_dde6590d
+edge #expr_912428a4 left #expr_e096901d
+edge #expr_a4b80349 left #expr_912428a4
+edge #expr_7a531641 left #expr_a4b80349
+edge #expr_b8683ef8 left #expr_4a97b1a0
+edge #expr_277371e7 left #expr_b8683ef8
+edge #expr_5e614dcf left #expr_277371e7
+edge #expr_5e614dcf arg #expr_9dc58a5c order:0
+edge #expr_7a531641 arg #expr_5e614dcf order:0
+edge #stmt_21a22fdb expr #expr_7a531641
+edge #block_b25e75de statement #stmt_21a22fdb order:0
+edge #decl_118b2c32 body #block_b25e75de

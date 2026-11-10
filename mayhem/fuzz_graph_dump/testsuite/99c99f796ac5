@@ -1,0 +1,34 @@
+zero-graph v1
+origin source-text
+module "aarch64-private-helper-ignored"
+hash "graph:077774b68c215579"
+
+node #mod_c95a774a Module name:"aarch64-private-helper-ignored" path:"aarch64-private-helper-ignored.0" line:1 column:1
+node #decl_e6c5762f Function name:"helper" type:"i32" path:"aarch64-private-helper-ignored.0" line:1 column:1
+node #param_cd0f0c13 Param name:"value" type:"i32" path:"aarch64-private-helper-ignored.0" line:1 column:11
+node #type_1a598412 TypeRef type:"i32" path:"aarch64-private-helper-ignored.0" line:1 column:11
+node #type_d5dbd429 TypeRef type:"i32" path:"aarch64-private-helper-ignored.0" line:1 column:1
+node #block_ec7f7a72 Block name:"body" path:"aarch64-private-helper-ignored.0" line:1 column:1
+node #stmt_71fe3d94 Return path:"aarch64-private-helper-ignored.0" line:2 column:5
+node #expr_0fbeb20b Call name:"+" path:"aarch64-private-helper-ignored.0" line:2 column:18
+node #expr_7991cb77 Identifier name:"value" path:"aarch64-private-helper-ignored.0" line:2 column:12
+node #expr_fc86c793 Literal value:"1" path:"aarch64-private-helper-ignored.0" line:2 column:20
+node #decl_1dfe9a38 Function name:"main" type:"i32" path:"aarch64-private-helper-ignored.0" line:5 column:1 exportC:true
+node #type_3f705272 TypeRef type:"i32" path:"aarch64-private-helper-ignored.0" line:5 column:1
+node #block_4b15e305 Block name:"body" path:"aarch64-private-helper-ignored.0" line:5 column:1
+node #stmt_07214901 Return path:"aarch64-private-helper-ignored.0" line:6 column:5
+node #expr_098dd5f9 Literal value:"42" path:"aarch64-private-helper-ignored.0" line:6 column:12
+edge #mod_c95a774a function #decl_e6c5762f order:0
+edge #decl_e6c5762f param #param_cd0f0c13 order:0
+edge #param_cd0f0c13 type #type_1a598412
+edge #decl_e6c5762f returnType #type_d5dbd429
+edge #expr_0fbeb20b left #expr_7991cb77
+edge #expr_0fbeb20b right #expr_fc86c793 order:1
+edge #stmt_71fe3d94 expr #expr_0fbeb20b
+edge #block_ec7f7a72 statement #stmt_71fe3d94 order:0
+edge #decl_e6c5762f body #block_ec7f7a72
+edge #mod_c95a774a function #decl_1dfe9a38 order:1
+edge #decl_1dfe9a38 returnType #type_3f705272
+edge #stmt_07214901 expr #expr_098dd5f9
+edge #block_4b15e305 statement #stmt_07214901 order:0
+edge #decl_1dfe9a38 body #block_4b15e305

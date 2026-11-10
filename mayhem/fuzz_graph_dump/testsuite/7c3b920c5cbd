@@ -1,0 +1,24 @@
+zero-graph v1
+origin source-text
+module "direct-string-len"
+hash "graph:bed41de1b517c68e"
+
+node #mod_9cee3fe0 Module name:"direct-string-len" path:"direct-string-len.0" line:1 column:1
+node #decl_34c15f51 Function name:"main" type:"usize" path:"direct-string-len.0" line:1 column:1 exportC:true
+node #type_b8b66659 TypeRef type:"usize" path:"direct-string-len.0" line:1 column:1
+node #block_dcd682c6 Block name:"body" path:"direct-string-len.0" line:1 column:1
+node #stmt_991bdb9c Return path:"direct-string-len.0" line:2 column:5
+node #expr_9ab0b49e MethodCall name:"len" path:"direct-string-len.0" line:2 column:23
+node #expr_8bd11add FieldAccess name:"len" path:"direct-string-len.0" line:2 column:20
+node #expr_6d38b286 FieldAccess name:"mem" path:"direct-string-len.0" line:2 column:16
+node #expr_adbf0b55 Identifier name:"std" path:"direct-string-len.0" line:2 column:12
+node #expr_5fe6fe96 Literal type:"String" value:"token" path:"direct-string-len.0" line:2 column:24
+edge #mod_9cee3fe0 function #decl_34c15f51 order:0
+edge #decl_34c15f51 returnType #type_b8b66659
+edge #expr_6d38b286 left #expr_adbf0b55
+edge #expr_8bd11add left #expr_6d38b286
+edge #expr_9ab0b49e left #expr_8bd11add
+edge #expr_9ab0b49e arg #expr_5fe6fe96 order:0
+edge #stmt_991bdb9c expr #expr_9ab0b49e
+edge #block_dcd682c6 statement #stmt_991bdb9c order:0
+edge #decl_34c15f51 body #block_dcd682c6

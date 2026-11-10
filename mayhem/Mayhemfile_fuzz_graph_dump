@@ -1,0 +1,10 @@
+project: savantenvs/zerolang
+target: fuzz_graph_dump
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_graph_dump/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_graph_dump
+    libfuzzer: true
+    dictionary: /mayhem/mayhem/fuzz_graph_dump/fuzz_graph_dump.dict
+    timeout: 10

@@ -1,0 +1,11 @@
+pub fn defaultName() -> String {
+    return "resource-cli.txt"
+}
+
+pub fn outputDir() -> String {
+    return std.env.getOr("ZERO_RESOURCE_DIR", ".zero")
+}
+
+pub fn outputName() -> String {
+    return std.args.getOr(1, defaultName())
+}

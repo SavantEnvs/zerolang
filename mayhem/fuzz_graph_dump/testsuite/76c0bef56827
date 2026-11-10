@@ -1,0 +1,20 @@
+zero-graph v1
+origin source-text
+module "direct-string-literal"
+hash "graph:507af548b251cb39"
+
+node #mod_93a14148 Module name:"direct-string-literal" path:"direct-string-literal.0" line:1 column:1
+node #decl_120a551b Function name:"main" type:"u8" path:"direct-string-literal.0" line:1 column:1 exportC:true
+node #type_44e7ddcf TypeRef type:"u8" path:"direct-string-literal.0" line:1 column:1
+node #block_8f9e1d39 Block name:"body" path:"direct-string-literal.0" line:1 column:1
+node #stmt_3176f3a3 Return path:"direct-string-literal.0" line:2 column:5
+node #expr_db51366e IndexAccess path:"direct-string-literal.0" line:2 column:19
+node #expr_5142f6d7 Literal type:"String" value:"token" path:"direct-string-literal.0" line:2 column:12
+node #expr_98a632b4 Literal value:"0" path:"direct-string-literal.0" line:2 column:20
+edge #mod_93a14148 function #decl_120a551b order:0
+edge #decl_120a551b returnType #type_44e7ddcf
+edge #expr_db51366e left #expr_5142f6d7
+edge #expr_db51366e right #expr_98a632b4 order:1
+edge #stmt_3176f3a3 expr #expr_db51366e
+edge #block_8f9e1d39 statement #stmt_3176f3a3 order:0
+edge #decl_120a551b body #block_8f9e1d39

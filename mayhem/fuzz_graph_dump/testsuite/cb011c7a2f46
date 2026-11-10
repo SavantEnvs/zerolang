@@ -1,0 +1,36 @@
+zero-graph v1
+origin source-text
+module "hello-let"
+hash "graph:06613b68bef2e151"
+
+node #mod_ed82b348 Module name:"hello-let" path:"hello-let.0" line:1 column:1
+node #decl_13d92fab Function name:"main" type:"Void" path:"hello-let.0" line:1 column:1 public:true fallible:true
+node #param_ba79b10c Param name:"world" type:"World" path:"hello-let.0" line:1 column:13
+node #type_b26da450 TypeRef type:"World" path:"hello-let.0" line:1 column:13
+node #type_32ab459e TypeRef type:"Void" path:"hello-let.0" line:1 column:1
+node #effect_c6b614f3 EffectRef name:"error" path:"hello-let.0" line:1 column:1
+node #block_20596abb Block name:"body" path:"hello-let.0" line:1 column:1
+node #stmt_edd2935a Let name:"message" type:"String" path:"hello-let.0" line:2 column:5
+node #expr_84383ce2 Literal type:"String" value:"hello from a binding\n" path:"hello-let.0" line:2 column:27
+node #type_a4b96880 TypeRef type:"String" path:"hello-let.0" line:2 column:5
+node #stmt_331e6908 Check path:"hello-let.0" line:3 column:5
+node #expr_cead595b MethodCall name:"write" path:"hello-let.0" line:3 column:26
+node #expr_adce74e0 FieldAccess name:"write" path:"hello-let.0" line:3 column:21
+node #expr_b060c2ef FieldAccess name:"out" path:"hello-let.0" line:3 column:17
+node #expr_df78e5d7 Identifier name:"world" path:"hello-let.0" line:3 column:11
+node #expr_3e4cc310 Identifier name:"message" path:"hello-let.0" line:3 column:27
+edge #mod_ed82b348 function #decl_13d92fab order:0
+edge #decl_13d92fab param #param_ba79b10c order:0
+edge #param_ba79b10c type #type_b26da450
+edge #decl_13d92fab returnType #type_32ab459e
+edge #decl_13d92fab effect #effect_c6b614f3
+edge #stmt_edd2935a expr #expr_84383ce2
+edge #stmt_edd2935a declaredType #type_a4b96880
+edge #block_20596abb statement #stmt_edd2935a order:0
+edge #expr_b060c2ef left #expr_df78e5d7
+edge #expr_adce74e0 left #expr_b060c2ef
+edge #expr_cead595b left #expr_adce74e0
+edge #expr_cead595b arg #expr_3e4cc310 order:0
+edge #stmt_331e6908 expr #expr_cead595b
+edge #block_20596abb statement #stmt_331e6908 order:1
+edge #decl_13d92fab body #block_20596abb

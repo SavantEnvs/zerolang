@@ -1,0 +1,36 @@
+zero-graph v1
+origin source-text
+module "c-import-target-linux"
+hash "graph:48012f24f03616aa"
+
+node #mod_f57ad8b8 Module name:"c-import-target-linux" path:"c-import-target-linux.0" line:1 column:1
+node #cimp_ba060935 CImport name:"c" value:"conformance/c/target-conditional.h" path:"c-import-target-linux.0" line:1 column:1
+node #decl_f6cb55f5 Function name:"main" type:"i32" path:"c-import-target-linux.0" line:3 column:1 exportC:true
+node #type_e5d7520c TypeRef type:"i32" path:"c-import-target-linux.0" line:3 column:1
+node #block_d7012adf Block name:"body" path:"c-import-target-linux.0" line:3 column:1
+node #stmt_28758946 Return path:"c-import-target-linux.0" line:4 column:5
+node #expr_a8782c56 Call name:"+" path:"c-import-target-linux.0" line:4 column:39
+node #expr_092d1d8b MethodCall name:"zero_c_linux_add" path:"c-import-target-linux.0" line:4 column:30
+node #expr_ff562b18 FieldAccess name:"zero_c_linux_add" path:"c-import-target-linux.0" line:4 column:14
+node #expr_008e7999 Identifier name:"c" path:"c-import-target-linux.0" line:4 column:12
+node #expr_8631b854 Literal value:"20" path:"c-import-target-linux.0" line:4 column:31
+node #expr_91210275 Literal value:"22" path:"c-import-target-linux.0" line:4 column:35
+node #expr_f5bed8dd MethodCall name:"zero_c_not_windows" path:"c-import-target-linux.0" line:4 column:61
+node #expr_22ceb4fa FieldAccess name:"zero_c_not_windows" path:"c-import-target-linux.0" line:4 column:43
+node #expr_46f4ba78 Identifier name:"c" path:"c-import-target-linux.0" line:4 column:41
+node #expr_37529f46 Literal value:"1" path:"c-import-target-linux.0" line:4 column:62
+edge #mod_f57ad8b8 cImport #cimp_ba060935 order:0
+edge #mod_f57ad8b8 function #decl_f6cb55f5 order:0
+edge #decl_f6cb55f5 returnType #type_e5d7520c
+edge #expr_ff562b18 left #expr_008e7999
+edge #expr_092d1d8b left #expr_ff562b18
+edge #expr_092d1d8b arg #expr_8631b854 order:0
+edge #expr_092d1d8b arg #expr_91210275 order:1
+edge #expr_a8782c56 left #expr_092d1d8b
+edge #expr_22ceb4fa left #expr_46f4ba78
+edge #expr_f5bed8dd left #expr_22ceb4fa
+edge #expr_f5bed8dd arg #expr_37529f46 order:0
+edge #expr_a8782c56 right #expr_f5bed8dd order:1
+edge #stmt_28758946 expr #expr_a8782c56
+edge #block_d7012adf statement #stmt_28758946 order:0
+edge #decl_f6cb55f5 body #block_d7012adf

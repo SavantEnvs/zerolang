@@ -1,0 +1,28 @@
+zero-graph v1
+origin source-text
+module "maybe-owned-null-repeat"
+hash "graph:5f3948de01ead48c"
+
+node #mod_48026530 Module name:"maybe-owned-null-repeat" path:"maybe-owned-null-repeat.0" line:1 column:1
+node #decl_46ba02bf Shape name:"File" value:"auto" path:"maybe-owned-null-repeat.0" line:1 column:1
+node #field_57676948 Field name:"fd" type:"i32" path:"maybe-owned-null-repeat.0" line:2 column:5
+node #type_7985040c TypeRef type:"i32" path:"maybe-owned-null-repeat.0" line:2 column:5
+node #decl_7a011ab2 Function name:"main" type:"Void" path:"maybe-owned-null-repeat.0" line:5 column:1 public:true
+node #type_624ecc9d TypeRef type:"Void" path:"maybe-owned-null-repeat.0" line:5 column:1
+node #block_5efe31dc Block name:"body" path:"maybe-owned-null-repeat.0" line:5 column:1
+node #stmt_d35f1ac3 Let name:"files" type:"[2]Maybe<owned<File>>" path:"maybe-owned-null-repeat.0" line:6 column:5
+node #expr_0d00bd4b ArrayLiteral value:"repeat" path:"maybe-owned-null-repeat.0" line:6 column:40
+node #expr_378458be Literal value:"null" path:"maybe-owned-null-repeat.0" line:6 column:41
+node #expr_4273a2df Literal value:"2" path:"maybe-owned-null-repeat.0" line:6 column:47
+node #type_756a54c3 TypeRef type:"[2]Maybe<owned<File>>" path:"maybe-owned-null-repeat.0" line:6 column:5
+edge #mod_48026530 shape #decl_46ba02bf order:0
+edge #decl_46ba02bf field #field_57676948 order:0
+edge #field_57676948 type #type_7985040c
+edge #mod_48026530 function #decl_7a011ab2 order:0
+edge #decl_7a011ab2 returnType #type_624ecc9d
+edge #expr_0d00bd4b arg #expr_378458be order:0
+edge #expr_0d00bd4b arg #expr_4273a2df order:1
+edge #stmt_d35f1ac3 expr #expr_0d00bd4b
+edge #stmt_d35f1ac3 declaredType #type_756a54c3
+edge #block_5efe31dc statement #stmt_d35f1ac3 order:0
+edge #decl_7a011ab2 body #block_5efe31dc

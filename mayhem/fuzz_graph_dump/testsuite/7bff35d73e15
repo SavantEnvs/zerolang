@@ -1,0 +1,16 @@
+zero-graph v1
+origin source-text
+module "unsupported-target-feature"
+hash "graph:f23dc4890223c71f"
+
+node #mod_bbcd80a8 Module name:"unsupported-target-feature" path:"unsupported-target-feature.0" line:1 column:1
+node #decl_19769c04 Function name:"main" type:"Void" path:"unsupported-target-feature.0" line:1 column:1 public:true
+node #param_a3156520 Param name:"net" type:"Net" path:"unsupported-target-feature.0" line:1 column:13
+node #type_97f40969 TypeRef type:"Net" path:"unsupported-target-feature.0" line:1 column:13
+node #type_0d0ac663 TypeRef type:"Void" path:"unsupported-target-feature.0" line:1 column:1
+node #block_2bcf5c5e Block name:"body" path:"unsupported-target-feature.0" line:1 column:1
+edge #mod_bbcd80a8 function #decl_19769c04 order:0
+edge #decl_19769c04 param #param_a3156520 order:0
+edge #param_a3156520 type #type_97f40969
+edge #decl_19769c04 returnType #type_0d0ac663
+edge #decl_19769c04 body #block_2bcf5c5e

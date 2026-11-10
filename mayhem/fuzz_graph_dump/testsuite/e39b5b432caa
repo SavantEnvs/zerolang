@@ -1,0 +1,30 @@
+zero-graph v1
+origin source-text
+module "package:shared@0.1.0"
+hash "graph:f6ab8298c1f64561"
+
+node #mod_8ffb2ce3 Module name:"main" path:"src/main.0" line:1 column:1
+node #decl_69a3d38c Function name:"main" type:"Void" path:"src/main.0" line:1 column:1 public:true fallible:true
+node #param_5115e43d Param name:"world" type:"World" path:"src/main.0" line:1 column:13
+node #type_a5ab9751 TypeRef type:"World" path:"src/main.0" line:1 column:13
+node #type_741c9815 TypeRef type:"Void" path:"src/main.0" line:1 column:1
+node #effect_23cb0f48 EffectRef name:"error" path:"src/main.0" line:1 column:1
+node #block_62212074 Block name:"body" path:"src/main.0" line:1 column:1
+node #stmt_eacae529 Check path:"src/main.0" line:2 column:5
+node #expr_8c7b5fc1 MethodCall name:"write" path:"src/main.0" line:2 column:26
+node #expr_a79e2341 FieldAccess name:"write" path:"src/main.0" line:2 column:21
+node #expr_cba4b73c FieldAccess name:"out" path:"src/main.0" line:2 column:17
+node #expr_7b5175d2 Identifier name:"world" path:"src/main.0" line:2 column:11
+node #expr_551ea2a6 Literal type:"String" value:"shared v1\n" path:"src/main.0" line:2 column:27
+edge #mod_8ffb2ce3 function #decl_69a3d38c order:0
+edge #decl_69a3d38c param #param_5115e43d order:0
+edge #param_5115e43d type #type_a5ab9751
+edge #decl_69a3d38c returnType #type_741c9815
+edge #decl_69a3d38c effect #effect_23cb0f48
+edge #expr_cba4b73c left #expr_7b5175d2
+edge #expr_a79e2341 left #expr_cba4b73c
+edge #expr_8c7b5fc1 left #expr_a79e2341
+edge #expr_8c7b5fc1 arg #expr_551ea2a6 order:0
+edge #stmt_eacae529 expr #expr_8c7b5fc1
+edge #block_62212074 statement #stmt_eacae529 order:0
+edge #decl_69a3d38c body #block_62212074

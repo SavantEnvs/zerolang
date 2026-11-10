@@ -1,0 +1,32 @@
+zero-graph v1
+origin source-text
+module "package:c-interop@0.1.0"
+hash "graph:ccb07efe2180537e"
+
+node #mod_b3cc478d Module name:"main" path:"src/main.0" line:1 column:1
+node #cimp_2dc5c2fe CImport name:"math" value:"examples/c-interop/vendor/include/mathshim.h" path:"src/main.0" line:1 column:1
+node #decl_efa14b27 Function name:"main" type:"Void" path:"src/main.0" line:3 column:1 public:true fallible:true
+node #param_b1927b80 Param name:"world" type:"World" path:"src/main.0" line:3 column:13
+node #type_df923c86 TypeRef type:"World" path:"src/main.0" line:3 column:13
+node #type_0b7c1232 TypeRef type:"Void" path:"src/main.0" line:3 column:1
+node #effect_f54097d7 EffectRef name:"error" path:"src/main.0" line:3 column:1
+node #block_f6cd8e97 Block name:"body" path:"src/main.0" line:3 column:1
+node #stmt_6e1966d7 Check path:"src/main.0" line:4 column:5
+node #expr_abc5e80c MethodCall name:"write" path:"src/main.0" line:4 column:26
+node #expr_d95331c3 FieldAccess name:"write" path:"src/main.0" line:4 column:21
+node #expr_dd87e785 FieldAccess name:"out" path:"src/main.0" line:4 column:17
+node #expr_abbbac8f Identifier name:"world" path:"src/main.0" line:4 column:11
+node #expr_c907d430 Literal type:"String" value:"c interop metadata ok\n" path:"src/main.0" line:4 column:27
+edge #mod_b3cc478d cImport #cimp_2dc5c2fe order:0
+edge #mod_b3cc478d function #decl_efa14b27 order:0
+edge #decl_efa14b27 param #param_b1927b80 order:0
+edge #param_b1927b80 type #type_df923c86
+edge #decl_efa14b27 returnType #type_0b7c1232
+edge #decl_efa14b27 effect #effect_f54097d7
+edge #expr_dd87e785 left #expr_abbbac8f
+edge #expr_d95331c3 left #expr_dd87e785
+edge #expr_abc5e80c left #expr_d95331c3
+edge #expr_abc5e80c arg #expr_c907d430 order:0
+edge #stmt_6e1966d7 expr #expr_abc5e80c
+edge #block_f6cd8e97 statement #stmt_6e1966d7 order:0
+edge #decl_efa14b27 body #block_f6cd8e97

@@ -1,0 +1,30 @@
+zero-graph v1
+origin source-text
+module "world-stream-renamed-param"
+hash "graph:fd87ff348ac3e3d9"
+
+node #mod_95549140 Module name:"world-stream-renamed-param" path:"world-stream-renamed-param.0" line:1 column:1
+node #decl_ec1e09bc Function name:"main" type:"Void" path:"world-stream-renamed-param.0" line:1 column:1 public:true fallible:true
+node #param_10027930 Param name:"w" type:"World" path:"world-stream-renamed-param.0" line:1 column:13
+node #type_d2f2233f TypeRef type:"World" path:"world-stream-renamed-param.0" line:1 column:13
+node #type_5260d056 TypeRef type:"Void" path:"world-stream-renamed-param.0" line:1 column:1
+node #effect_b68deabb EffectRef name:"error" path:"world-stream-renamed-param.0" line:1 column:1
+node #block_ea450b47 Block name:"body" path:"world-stream-renamed-param.0" line:1 column:1
+node #stmt_97b010fb Check path:"world-stream-renamed-param.0" line:2 column:5
+node #expr_77feceaf MethodCall name:"write" path:"world-stream-renamed-param.0" line:2 column:22
+node #expr_8af08252 FieldAccess name:"write" path:"world-stream-renamed-param.0" line:2 column:17
+node #expr_699801c6 FieldAccess name:"out" path:"world-stream-renamed-param.0" line:2 column:13
+node #expr_e6354ea1 Identifier name:"w" path:"world-stream-renamed-param.0" line:2 column:11
+node #expr_fc8e0a7b Literal type:"String" value:"renamed world\n" path:"world-stream-renamed-param.0" line:2 column:23
+edge #mod_95549140 function #decl_ec1e09bc order:0
+edge #decl_ec1e09bc param #param_10027930 order:0
+edge #param_10027930 type #type_d2f2233f
+edge #decl_ec1e09bc returnType #type_5260d056
+edge #decl_ec1e09bc effect #effect_b68deabb
+edge #expr_699801c6 left #expr_e6354ea1
+edge #expr_8af08252 left #expr_699801c6
+edge #expr_77feceaf left #expr_8af08252
+edge #expr_77feceaf arg #expr_fc8e0a7b order:0
+edge #stmt_97b010fb expr #expr_77feceaf
+edge #block_ea450b47 statement #stmt_97b010fb order:0
+edge #decl_ec1e09bc body #block_ea450b47

@@ -1,0 +1,42 @@
+zero-graph v1
+origin source-text
+module "direct-i64-return"
+hash "graph:e084617bd20e7373"
+
+node #mod_6fd415a8 Module name:"direct-i64-return" path:"direct-i64-return.0" line:1 column:1
+node #decl_fadf5736 Function name:"main" type:"i64" path:"direct-i64-return.0" line:1 column:1 exportC:true
+node #type_84cc63f5 TypeRef type:"i64" path:"direct-i64-return.0" line:1 column:1
+node #block_c7d14557 Block name:"body" path:"direct-i64-return.0" line:1 column:1
+node #stmt_06a2b807 Return path:"direct-i64-return.0" line:2 column:5
+node #expr_1236f504 Literal value:"9223372036854775807" path:"direct-i64-return.0" line:2 column:12
+node #decl_b626ead2 Function name:"wide_sum" type:"u64" path:"direct-i64-return.0" line:5 column:1 exportC:true
+node #type_0624ff63 TypeRef type:"u64" path:"direct-i64-return.0" line:5 column:1
+node #block_08060c4d Block name:"body" path:"direct-i64-return.0" line:5 column:1
+node #stmt_d46bf45c-7876 Let name:"left" type:"u64" path:"direct-i64-return.0" line:6 column:5
+node #expr_082107af Literal value:"4000000000" path:"direct-i64-return.0" line:6 column:21
+node #type_2e02dca4 TypeRef type:"u64" path:"direct-i64-return.0" line:6 column:5
+node #stmt_d46bf45c-3c4b Let name:"right" type:"u64" path:"direct-i64-return.0" line:7 column:5
+node #expr_b44a892d Literal value:"42" path:"direct-i64-return.0" line:7 column:22
+node #type_5d4b885e TypeRef type:"u64" path:"direct-i64-return.0" line:7 column:5
+node #stmt_a4a18090 Return path:"direct-i64-return.0" line:8 column:5
+node #expr_866cdaa3 Call name:"+" path:"direct-i64-return.0" line:8 column:17
+node #expr_995139f9 Identifier name:"left" path:"direct-i64-return.0" line:8 column:12
+node #expr_30e7fac3 Identifier name:"right" path:"direct-i64-return.0" line:8 column:19
+edge #mod_6fd415a8 function #decl_fadf5736 order:0
+edge #decl_fadf5736 returnType #type_84cc63f5
+edge #stmt_06a2b807 expr #expr_1236f504
+edge #block_c7d14557 statement #stmt_06a2b807 order:0
+edge #decl_fadf5736 body #block_c7d14557
+edge #mod_6fd415a8 function #decl_b626ead2 order:1
+edge #decl_b626ead2 returnType #type_0624ff63
+edge #stmt_d46bf45c-7876 expr #expr_082107af
+edge #stmt_d46bf45c-7876 declaredType #type_2e02dca4
+edge #block_08060c4d statement #stmt_d46bf45c-7876 order:0
+edge #stmt_d46bf45c-3c4b expr #expr_b44a892d
+edge #stmt_d46bf45c-3c4b declaredType #type_5d4b885e
+edge #block_08060c4d statement #stmt_d46bf45c-3c4b order:1
+edge #expr_866cdaa3 left #expr_995139f9
+edge #expr_866cdaa3 right #expr_30e7fac3 order:1
+edge #stmt_a4a18090 expr #expr_866cdaa3
+edge #block_08060c4d statement #stmt_a4a18090 order:2
+edge #decl_b626ead2 body #block_08060c4d

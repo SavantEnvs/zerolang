@@ -1,0 +1,10 @@
+project: savantenvs/zerolang
+target: fuzz_canonical_text
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_canonical_text/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_canonical_text
+    libfuzzer: true
+    dictionary: /mayhem/mayhem/fuzz_canonical_text/fuzz_canonical_text.dict
+    timeout: 10

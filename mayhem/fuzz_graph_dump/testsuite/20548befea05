@@ -1,0 +1,30 @@
+zero-graph v1
+origin source-text
+module "package:program-graph-fixture@0.1.0"
+hash "graph:07bdf6737e681510"
+
+node #mod_7e2c86e8 Module name:"hello" path:"hello.0" line:1 column:1
+node #decl_f334597f Function name:"main" type:"Void" path:"hello.0" line:1 column:1 public:true fallible:true
+node #param_7852621d Param name:"world" type:"World" path:"hello.0" line:1 column:13
+node #type_032bb290 TypeRef type:"World" path:"hello.0" line:1 column:13
+node #type_52a529e1 TypeRef type:"Void" path:"hello.0" line:1 column:1
+node #effect_5baea87c EffectRef name:"error" path:"hello.0" line:1 column:1
+node #block_12e61a84 Block name:"body" path:"hello.0" line:1 column:1
+node #stmt_a0a43d65 Check path:"hello.0" line:2 column:5
+node #expr_534d9976 MethodCall name:"write" path:"hello.0" line:2 column:26
+node #expr_23d2708b FieldAccess name:"write" path:"hello.0" line:2 column:21
+node #expr_2c706838 FieldAccess name:"out" path:"hello.0" line:2 column:17
+node #expr_389dabe8 Identifier name:"world" path:"hello.0" line:2 column:11
+node #expr_55ea5918 Literal type:"String" value:"hello from zero\n" path:"hello.0" line:2 column:27
+edge #mod_7e2c86e8 function #decl_f334597f order:0
+edge #decl_f334597f param #param_7852621d order:0
+edge #param_7852621d type #type_032bb290
+edge #decl_f334597f returnType #type_52a529e1
+edge #decl_f334597f effect #effect_5baea87c
+edge #expr_2c706838 left #expr_389dabe8
+edge #expr_23d2708b left #expr_2c706838
+edge #expr_534d9976 left #expr_23d2708b
+edge #expr_534d9976 arg #expr_55ea5918 order:0
+edge #stmt_a0a43d65 expr #expr_534d9976
+edge #block_12e61a84 statement #stmt_a0a43d65 order:0
+edge #decl_f334597f body #block_12e61a84

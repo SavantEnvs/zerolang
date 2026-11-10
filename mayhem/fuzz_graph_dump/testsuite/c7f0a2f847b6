@@ -1,0 +1,16 @@
+zero-graph v1
+origin source-text
+module "direct-exe-return"
+hash "graph:2f45b02e9b20ea33"
+
+node #mod_6def1bf8 Module name:"direct-exe-return" path:"direct-exe-return.0" line:1 column:1
+node #decl_cd598d9d Function name:"main" type:"i32" path:"direct-exe-return.0" line:1 column:1 exportC:true
+node #type_cbffa915 TypeRef type:"i32" path:"direct-exe-return.0" line:1 column:1
+node #block_92f6485a Block name:"body" path:"direct-exe-return.0" line:1 column:1
+node #stmt_a54d3c99 Return path:"direct-exe-return.0" line:2 column:5
+node #expr_afc930c1 Literal value:"42" path:"direct-exe-return.0" line:2 column:12
+edge #mod_6def1bf8 function #decl_cd598d9d order:0
+edge #decl_cd598d9d returnType #type_cbffa915
+edge #stmt_a54d3c99 expr #expr_afc930c1
+edge #block_92f6485a statement #stmt_a54d3c99 order:0
+edge #decl_cd598d9d body #block_92f6485a

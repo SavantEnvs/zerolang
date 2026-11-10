@@ -1,0 +1,40 @@
+zero-graph v1
+origin source-text
+module "macho-open-byte-slice"
+hash "graph:9b07350b20ead40d"
+
+node #mod_d4c41bf4 Module name:"macho-open-byte-slice" path:"macho-open-byte-slice.0" line:1 column:1
+node #decl_338ab567 Function name:"main" type:"usize" path:"macho-open-byte-slice.0" line:1 column:1 exportC:true
+node #type_15d25e1a TypeRef type:"usize" path:"macho-open-byte-slice.0" line:1 column:1
+node #block_8cba4225 Block name:"body" path:"macho-open-byte-slice.0" line:1 column:1
+node #stmt_9ea8c04f Let name:"text" type:"String" path:"macho-open-byte-slice.0" line:2 column:5
+node #expr_9c04d19e Literal type:"String" value:"abcdef" path:"macho-open-byte-slice.0" line:2 column:24
+node #type_2de9fbb4 TypeRef type:"String" path:"macho-open-byte-slice.0" line:2 column:5
+node #stmt_15da98ff Let name:"suffix" type:"Span<u8>" path:"macho-open-byte-slice.0" line:3 column:5
+node #expr_fa21fcfe Slice path:"macho-open-byte-slice.0" line:3 column:32
+node #expr_7293f7f2 Identifier name:"text" path:"macho-open-byte-slice.0" line:3 column:28
+node #expr_7d1e1d67 Literal value:"2" path:"macho-open-byte-slice.0" line:3 column:33
+node #type_5cf52e36 TypeRef type:"Span<u8>" path:"macho-open-byte-slice.0" line:3 column:5
+node #stmt_43ca633b Return path:"macho-open-byte-slice.0" line:4 column:5
+node #expr_1ea48cac MethodCall name:"len" path:"macho-open-byte-slice.0" line:4 column:23
+node #expr_189bddb1 FieldAccess name:"len" path:"macho-open-byte-slice.0" line:4 column:20
+node #expr_b8f62d5c FieldAccess name:"mem" path:"macho-open-byte-slice.0" line:4 column:16
+node #expr_a4b6de34 Identifier name:"std" path:"macho-open-byte-slice.0" line:4 column:12
+node #expr_5ea8b101 Identifier name:"suffix" path:"macho-open-byte-slice.0" line:4 column:24
+edge #mod_d4c41bf4 function #decl_338ab567 order:0
+edge #decl_338ab567 returnType #type_15d25e1a
+edge #stmt_9ea8c04f expr #expr_9c04d19e
+edge #stmt_9ea8c04f declaredType #type_2de9fbb4
+edge #block_8cba4225 statement #stmt_9ea8c04f order:0
+edge #expr_fa21fcfe left #expr_7293f7f2
+edge #expr_fa21fcfe arg #expr_7d1e1d67 order:0
+edge #stmt_15da98ff expr #expr_fa21fcfe
+edge #stmt_15da98ff declaredType #type_5cf52e36
+edge #block_8cba4225 statement #stmt_15da98ff order:1
+edge #expr_b8f62d5c left #expr_a4b6de34
+edge #expr_189bddb1 left #expr_b8f62d5c
+edge #expr_1ea48cac left #expr_189bddb1
+edge #expr_1ea48cac arg #expr_5ea8b101 order:0
+edge #stmt_43ca633b expr #expr_1ea48cac
+edge #block_8cba4225 statement #stmt_43ca633b order:2
+edge #decl_338ab567 body #block_8cba4225

@@ -1,0 +1,30 @@
+zero-graph v1
+origin source-text
+module "package:toml-package@0.1.0"
+hash "graph:947aed94d50bbd18"
+
+node #mod_main Module name:"main" path:"src/main.0" line:1 column:1
+node #fn_main Function name:"main" type:"Void" path:"src/main.0" line:1 column:1 public:true fallible:true
+node #param_main_world Param name:"world" type:"World" path:"src/main.0" line:1 column:13
+node #type_main_world_type TypeRef type:"World" path:"src/main.0" line:1 column:13
+node #type_main_returnType TypeRef type:"Void" path:"src/main.0" line:1 column:1
+node #effect_main_error EffectRef name:"error" path:"src/main.0" line:1 column:1
+node #block_main_body Block name:"body" path:"src/main.0" line:1 column:1
+node #stmt_main_check_write_0 Check path:"src/main.0" line:2 column:5
+node #expr_main_write_call_0 MethodCall name:"write" path:"src/main.0" line:2 column:26
+node #expr_main_write_field_0 FieldAccess name:"write" path:"src/main.0" line:2 column:21
+node #expr_main_out_field_0 FieldAccess name:"out" path:"src/main.0" line:2 column:17
+node #expr_main_write_receiver_0 Identifier name:"world" path:"src/main.0" line:2 column:11
+node #expr_main_write_text_0 Literal type:"String" value:"toml manifest ok\n" path:"src/main.0" line:2 column:27
+edge #mod_main function #fn_main order:0
+edge #fn_main param #param_main_world order:0
+edge #param_main_world type #type_main_world_type
+edge #fn_main returnType #type_main_returnType
+edge #fn_main effect #effect_main_error
+edge #expr_main_out_field_0 left #expr_main_write_receiver_0
+edge #expr_main_write_field_0 left #expr_main_out_field_0
+edge #expr_main_write_call_0 left #expr_main_write_field_0
+edge #expr_main_write_call_0 arg #expr_main_write_text_0 order:0
+edge #stmt_main_check_write_0 expr #expr_main_write_call_0
+edge #block_main_body statement #stmt_main_check_write_0 order:0
+edge #fn_main body #block_main_body

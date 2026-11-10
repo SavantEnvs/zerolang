@@ -1,0 +1,34 @@
+zero-graph v1
+origin source-text
+module "direct-obj-add"
+hash "graph:0397618e7cd737fd"
+
+node #mod_7e58c3f6 Module name:"direct-obj-add" path:"direct-obj-add.0" line:1 column:1
+node #decl_a9739e42 Function name:"main" type:"i32" path:"direct-obj-add.0" line:1 column:1 exportC:true
+node #param_7ce202df Param name:"a" type:"i32" path:"direct-obj-add.0" line:1 column:18
+node #type_279d86c1 TypeRef type:"i32" path:"direct-obj-add.0" line:1 column:18
+node #param_71f2b8be Param name:"b" type:"i32" path:"direct-obj-add.0" line:1 column:26
+node #type_640bcf9f TypeRef type:"i32" path:"direct-obj-add.0" line:1 column:26
+node #type_8cad454d TypeRef type:"i32" path:"direct-obj-add.0" line:1 column:1
+node #block_e09b843a Block name:"body" path:"direct-obj-add.0" line:1 column:1
+node #stmt_4543b955 Let name:"sum" type:"i32" path:"direct-obj-add.0" line:2 column:5
+node #expr_fd5ddfe7 Call name:"+" path:"direct-obj-add.0" line:2 column:22
+node #expr_76b71549 Identifier name:"a" path:"direct-obj-add.0" line:2 column:20
+node #expr_3dd888d3 Identifier name:"b" path:"direct-obj-add.0" line:2 column:24
+node #type_6ac9c2c6 TypeRef type:"i32" path:"direct-obj-add.0" line:2 column:5
+node #stmt_89f566b0 Return path:"direct-obj-add.0" line:3 column:5
+node #expr_47c3f2f9 Identifier name:"sum" path:"direct-obj-add.0" line:3 column:12
+edge #mod_7e58c3f6 function #decl_a9739e42 order:0
+edge #decl_a9739e42 param #param_7ce202df order:0
+edge #param_7ce202df type #type_279d86c1
+edge #decl_a9739e42 param #param_71f2b8be order:1
+edge #param_71f2b8be type #type_640bcf9f
+edge #decl_a9739e42 returnType #type_8cad454d
+edge #expr_fd5ddfe7 left #expr_76b71549
+edge #expr_fd5ddfe7 right #expr_3dd888d3 order:1
+edge #stmt_4543b955 expr #expr_fd5ddfe7
+edge #stmt_4543b955 declaredType #type_6ac9c2c6
+edge #block_e09b843a statement #stmt_4543b955 order:0
+edge #stmt_89f566b0 expr #expr_47c3f2f9
+edge #block_e09b843a statement #stmt_89f566b0 order:1
+edge #decl_a9739e42 body #block_e09b843a
